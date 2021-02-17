@@ -8,4 +8,4 @@ a.out.dSYM
 .vscode/
 .DS_STORE
 .\#*
-Home_shrubbery
+output_valgrind
