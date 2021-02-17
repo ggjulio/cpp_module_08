@@ -6,7 +6,7 @@
 /*   By: juligonz <juligonz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/17 02:09:48 by juligonz          #+#    #+#             */
-/*   Updated: 2021/02/17 14:29:54 by juligonz         ###   ########.fr       */
+/*   Updated: 2021/02/17 14:45:43 by juligonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,10 +31,6 @@ public:
 	void addNumber(int n);
 	unsigned int shortestSpan();
 	unsigned int longestSpan();
-
-	class not_enough_elements: std::exception{
-		virtual const char* what() const throw();
-	};
 };
 
 #endif
