@@ -6,7 +6,7 @@
 /*   By: juligonz <juligonz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/17 02:06:45 by juligonz          #+#    #+#             */
-/*   Updated: 2021/02/17 14:28:25 by juligonz         ###   ########.fr       */
+/*   Updated: 2021/02/17 14:34:30 by juligonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,13 +49,13 @@ int main(){
 			sp.addNumber(5);
 			sp.addNumber(5);
 			sp.addNumber(5);
-			sp.addNumber(5);
-			sp.addNumber(5);
+			std::cout << "Failed !! :-("	<< std::endl;
 		} 
 		catch (std::out_of_range &e){
 			std::cout << "Too many elements ! only 5 pls :"	<< std::endl
 				<< "\t" << e.what() << std::endl;
 		}
+		
 	}
 	std::cout << "################### Test Negative elems... #############" << std::endl;
 	{
