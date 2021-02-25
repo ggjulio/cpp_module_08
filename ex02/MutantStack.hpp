@@ -6,7 +6,7 @@
 /*   By: juligonz <juligonz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/17 14:57:35 by juligonz          #+#    #+#             */
-/*   Updated: 2021/02/17 14:57:45 by juligonz         ###   ########.fr       */
+/*   Updated: 2021/02/20 18:24:44 by juligonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ public:
 	MutantStack();
 	MutantStack(const MutantStack &);
 	MutantStack & operator=(const MutantStack &);
-	~MutantStack();
+	virtual ~MutantStack();
 
 	
 };
@@ -42,4 +42,5 @@ MutantStack::MutantStack(const MutantStack &other){
 MutantStack & MutantStack::operator=(const MutantStack &){
 	
 }
+
 MutantStack::~MutantStack(){}
