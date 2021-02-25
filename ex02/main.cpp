@@ -6,14 +6,22 @@
 /*   By: juligonz <juligonz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/17 14:57:19 by juligonz          #+#    #+#             */
-/*   Updated: 2021/02/22 06:01:34 by juligonz         ###   ########.fr       */
+/*   Updated: 2021/02/25 11:25:13 by juligonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "MutantStack.hpp"
 
+#include <iostream>
+#include <iterator>
+#include <string>
+#include <vector>
+
 int main()
 {
+	std::vector<int> v;
+	auto t = v.end();
+	
 	MutantStack<int>	mstack;
 
 	mstack.push(5);
