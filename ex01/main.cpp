@@ -6,7 +6,7 @@
 /*   By: juligonz <juligonz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/17 02:06:45 by juligonz          #+#    #+#             */
-/*   Updated: 2021/03/01 13:37:22 by juligonz         ###   ########.fr       */
+/*   Updated: 2021/03/01 13:47:44 by juligonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ int main(){
 	{
 		Span sp = Span(3);
 
-		try{
+		try {
 			sp.addNumber(5);
 			sp.addNumber(5);
 			sp.addNumber(5);
@@ -92,6 +92,22 @@ int main(){
 
 		std::cout << sp.shortestSpan() << std::endl;
 		std::cout << sp.longestSpan() << std::endl;
+	}
+	std::cout << "################### Test addRange too many numbers... #############" << std::endl;
+	{
+		Span sp = Span(10);
+		std::vector<int> vec(11);
+
+		std::generate(vec.begin(), vec.end(), randomNumber);
+		try {
+			sp.addRange(vec.begin(), vec.end());
+		} 
+		catch (std::out_of_range &e){
+			std::cout << "Too many elements ! max: 10 | actual: " << vec.size()
+				<< " :" << std::endl
+				<< "\t" << e.what() << std::endl;
+		}
+		
 	}
 
 	return 0;
