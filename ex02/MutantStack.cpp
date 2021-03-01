@@ -6,7 +6,8 @@
 /*   By: juligonz <juligonz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/17 14:57:33 by juligonz          #+#    #+#             */
-/*   Updated: 2021/02/17 14:57:34 by juligonz         ###   ########.fr       */
+/*   Updated: 2021/03/01 09:15:01 by juligonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+// useless (my class is a template...)
