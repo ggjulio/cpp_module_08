@@ -6,7 +6,7 @@
 /*   By: juligonz <juligonz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/17 02:09:48 by juligonz          #+#    #+#             */
-/*   Updated: 2021/02/17 14:45:43 by juligonz         ###   ########.fr       */
+/*   Updated: 2021/03/01 13:12:23 by juligonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ public:
 	~Span();
 
 	void addNumber(int n);
+	void addRange(std::vector<int>::iterator begin, std::vector<int>::iterator end);
 	unsigned int shortestSpan();
 	unsigned int longestSpan();
 };

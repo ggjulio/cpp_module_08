@@ -6,7 +6,7 @@
 /*   By: juligonz <juligonz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/17 14:29:09 by juligonz          #+#    #+#             */
-/*   Updated: 2021/02/17 14:46:14 by juligonz         ###   ########.fr       */
+/*   Updated: 2021/03/01 13:17:09 by juligonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,12 @@ void Span::addNumber(int number){
 	if (_vector.size()  >= _n)
 		throw std::out_of_range("Can't add more number.");
 	_vector.push_back(number);
+}
+
+void Span::addRange(std::vector<int>::iterator begin, std::vector<int>::iterator end){
+	// if (std::distance(begin, end) > _n - _vector.size())
+		// throw std::out_of_range("Can't add more number.");
+	_vector.insert(_vector.end(), begin, end);
 }
 
 unsigned int Span::shortestSpan(){

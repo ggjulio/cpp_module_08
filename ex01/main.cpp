@@ -6,15 +6,20 @@
 /*   By: juligonz <juligonz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/17 02:06:45 by juligonz          #+#    #+#             */
-/*   Updated: 2021/03/01 10:14:30 by juligonz         ###   ########.fr       */
+/*   Updated: 2021/03/01 13:37:22 by juligonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
+#include <algorithm>
 #include <stdexcept>
+#include <ctime>
 #include "Span.hpp"
 
+int randomNumber () { return (std::rand()%15000); }
+
 int main(){
+	std::srand(std::time(0));
 	{
 		Span sp = Span(5);
 		
@@ -70,14 +75,21 @@ int main(){
 	std::cout << "################### Test Negative elems... #############" << std::endl;
 	{
 		Span sp = Span(10);
-		
-		sp.addNumber(-5);
-		sp.addNumber(17);
-		sp.addNumber(-6);
-		sp.addNumber(0);
-		sp.addNumber(0);
-		sp.addNumber(0);
-		sp.addNumber(11);
+		const int arr[] = {-5, 17, -6, 0, 0, 0, 11};
+		std::vector<int> vec(arr, arr + sizeof(arr) / sizeof(*arr));
+
+		sp.addRange(vec.begin(), vec.end());
+		std::cout << sp.shortestSpan() << std::endl;
+		std::cout << sp.longestSpan() << std::endl;
+	}
+	std::cout << "################### Test 10000... #############" << std::endl;
+	{
+		Span sp = Span(10000);
+		std::vector<int> vec(10000);
+
+		std::generate(vec.begin(), vec.end(), randomNumber);
+		sp.addRange(vec.begin(), vec.end());
+
 		std::cout << sp.shortestSpan() << std::endl;
 		std::cout << sp.longestSpan() << std::endl;
 	}
