@@ -6,7 +6,7 @@
 /*   By: juligonz <juligonz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/17 02:06:45 by juligonz          #+#    #+#             */
-/*   Updated: 2021/02/17 14:34:30 by juligonz         ###   ########.fr       */
+/*   Updated: 2021/03/01 10:14:30 by juligonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,16 @@ int main(){
 				<< "\t" << e.what() << std::endl;
 		}
 	}
+	std::cout << "################### Test two elem... #############" << std::endl;
+	{
+		Span sp = Span(5);
+		
+		sp.addNumber(5);
+		sp.addNumber(5);
+
+		std::cout << sp.shortestSpan() << std::endl;
+		std::cout << sp.longestSpan() << std::endl;
+	}
 	std::cout << "################### Test Too many elem... #############" << std::endl;
 	{
 		Span sp = Span(3);
@@ -52,7 +62,7 @@ int main(){
 			std::cout << "Failed !! :-("	<< std::endl;
 		} 
 		catch (std::out_of_range &e){
-			std::cout << "Too many elements ! only 5 pls :"	<< std::endl
+			std::cout << "Too many elements ! only 3 pls :"	<< std::endl
 				<< "\t" << e.what() << std::endl;
 		}
 		
